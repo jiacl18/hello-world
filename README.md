@@ -69,13 +69,21 @@ pandoc -f markdown -t latex hello.txt
 还有其他参数如下：
 ```
 -v: 打印版本信息
+
 -h：显示语法帮助
+
 --verbost: 显示详细调试信息
+
 --log：指定输出日志信息
+
 --list-input-formats：列出支持的输入格式
+
 --list-output-formats：列出支持的输出格式
+
 --list-extensions：列表支持Markdown扩展，后面跟一个+或者-说明是否在pandoc的Markdown中默认启用
+
 --list-highlight-languages:列出语法突出显示支持的语言
+
 --list-highlight-styles:列出支持语法高亮的样式。
 ```
 
