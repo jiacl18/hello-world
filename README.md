@@ -1,6 +1,6 @@
 # Markdown教程
 ## 简介
-Markdown是一种轻量级**标记语言**，具有轻量化、易读易写，支持图片、图表及数学式，许多网站广泛支持Markdown格式显示，如**GIthub**、reddit、简书等。
+Markdown是一种轻量级**标记语言**，具有轻量化、易读易写的优点，支持图片、图表及数学式等，许多网站广泛支持Markdown格式显示，如**Github**、reddit、简书等。
 
 ## 步骤
 1. 学习Markdown的语法，请参考[Markdown基本语法](https://www.jianshu.com/p/191d1e21f7ed)。
@@ -36,3 +36,47 @@ Pandoc 已经被集成到系统的软件源内，可直接从软件源安装：
 ```
 sudo apt-get install pandoc
 ```
+
+## 使用
+### Windows平台
+打开**cmd**，通过**cd**指令进入pandoc安装目录下，并将要转换的文件放在这个目录下。然后在命令行中输入pandoc命令（见下）。
+
+### Linux平台
+打开终端窗口，输入pandoc命令(见下)。
+
+### Pandoc命令
+Pandoc官方命令手册见 [Pandoc User's Guide](https://pandoc.org/MANUAL.html#option--standalone)
+
+常用命令如下：
+
+命令均为：“pandoc + 参数 ”的形式
+```
+pandoc -o output.html input.txt
+
+-o: 输出到文件output.html
+```
+上式命令为：将输入文件input.txt转换生成为output.html，原输入文件会保留
+
+```
+pandoc -f markdown -t latex hello.txt
+
+-f: 指定输入格式(from)，比如docx、epub、md、html等
+
+-t: 指定输出格式(to)，比如docx、epub、md、html等
+```
+上式命令为：将hello.txt以markdown格式输入，转换为latex格式
+
+还有其他参数如下：
+```
+-v: 打印版本信息
+-h：显示语法帮助
+--verbost: 显示详细调试信息
+--log：指定输出日志信息
+--list-input-formats：列出支持的输入格式
+--list-output-formats：列出支持的输出格式
+--list-extensions：列表支持Markdown扩展，后面跟一个+或者-说明是否在pandoc的Markdown中默认启用
+--list-highlight-languages:列出语法突出显示支持的语言
+--list-highlight-styles:列出支持语法高亮的样式。
+```
+
+
