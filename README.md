@@ -88,3 +88,5 @@ pandoc -f markdown -t latex hello.txt
 ```
 
 
+参考[guoyuchaun](./guo.rst)
+
